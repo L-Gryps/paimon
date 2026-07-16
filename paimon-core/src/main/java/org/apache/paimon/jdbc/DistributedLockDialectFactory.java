@@ -25,6 +25,7 @@ class DistributedLockDialectFactory {
             case SQLITE:
                 return new SqlLiteDistributedLockDialect();
             case MYSQL:
+            case DM:
                 return new MysqlDistributedLockDialect();
             case POSTGRESQL:
                 return new PostgresqlDistributedLockDialect();
@@ -39,6 +40,7 @@ class DistributedLockDialectFactory {
         SQLITE,
         MARIADB,
         MYSQL,
-        POSTGRESQL
+        POSTGRESQL,
+        DM
     }
 }
